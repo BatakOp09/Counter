@@ -1,0 +1,86 @@
+@import "button";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-size: clamp(14px,1.5vw,18px);
+}
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://plus.unsplash.com/premium_photo-1710119487743-48959c984d45?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position:center;
+    background-size:cover;
+    .box{
+        height: 80%;
+        width: 35%;
+        background-color:white;
+        @include flexCol(2rem);
+        padding: 3rem;
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+    /* translucent white */
+    background: rgba(255, 255, 255, 0.12);
+    /* border */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* the important blur */
+    -webkit-backdrop-filter: blur(8px); /* Safari */
+    backdrop-filter: blur(8px);         /* modern browsers */
+    /* soft shadow */
+    box-shadow: 0 8px 30px rgba(16, 20, 30, 0.45);
+    color: #fff;
+
+        h1{
+            align-self: center;
+            font-size: 5rem;
+            color:black;
+        }
+
+        .btn{
+            @include flexCol(1rem);
+
+            button{
+                padding: 2px 5px;
+                border-radius: none;
+                box-shadow: 4px 5px;
+                i{
+                    font-size: 2rem;
+                }
+            }
+            button:hover{
+                cursor: pointer;
+                box-shadow: 2px 3px;
+            }
+
+            #inc{
+                background-color: yellowgreen; 
+            }
+            #dec{
+                background-color: red;
+            }
+            #res{
+                background-color:blue;
+            }
+
+        }
+
+
+    }
+    footer{
+        margin-top: 1rem;
+        color:rgb(255, 255, 255);
+        font-weight: 600;
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+}
+
